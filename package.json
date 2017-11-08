@@ -1,0 +1,24 @@
+{
+  "name": "pjatk-edux-crawler",
+  "version": "1.0.0",
+  "description": "An easy way to see new notifications on the EDUX platform.",
+  "main": "index.js",
+  "scripts": {
+    "config": "cp .env.dist .env",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukaszklis/pjatk-edux-crawler.git"
+  },
+  "author": "Łukasz Kliś <lukasz@klis.pl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukaszklis/pjatk-edux-crawler/issues"
+  },
+  "homepage": "https://github.com/lukaszklis/pjatk-edux-crawler#readme",
+  "dependencies": {
+    "chromeless": "^1.3.0",
+    "dotenv": "^4.0.0"
+  }
+}
