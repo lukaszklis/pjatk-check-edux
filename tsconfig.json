@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "skipDefaultLibCheck": true,
+        "noEmit": true,
+        "lib": [
+            "dom",
+            "es2015"
+        ],
+        "types": [
+            "dotenv",
+            "jest",
+            "node"
+        ]
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
