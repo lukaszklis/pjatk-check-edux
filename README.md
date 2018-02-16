@@ -1,4 +1,4 @@
-# EDUX Crawler @ [PJATK](http://www.pja.edu.pl) [![Gitmoji](https://img.shields.io/badge/gitmoji-%20📖%20🛠-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me)
+# EDUX Crawler @ [PJATK](http://www.pja.edu.pl) [![Gitmoji](https://img.shields.io/badge/gitmoji-%20📖%20🛠-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me) [![Build Status](https://travis-ci.org/lukaszklis/pjatk-edux-crawler.svg?branch=master)](https://travis-ci.org/lukaszklis/pjatk-edux-crawler)
 
 After becoming a student at PJATK, I was extremely disappointed with lack of ability to receive notifications whenever
 something is updated in the system (new announcements, forum entries, homework assignments).
