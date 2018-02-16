@@ -1,24 +1,44 @@
 {
-  "name": "pjatk-edux-crawler",
-  "version": "1.0.0",
-  "description": "An easy way to see new notifications on the EDUX platform.",
-  "main": "index.js",
-  "scripts": {
-    "config": "cp .env.dist .env",
-    "start": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lukaszklis/pjatk-edux-crawler.git"
-  },
-  "author": "Łukasz Kliś <lukasz@klis.pl>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/lukaszklis/pjatk-edux-crawler/issues"
-  },
-  "homepage": "https://github.com/lukaszklis/pjatk-edux-crawler#readme",
-  "dependencies": {
-    "chromeless": "^1.4.0",
-    "dotenv": "^4.0.0"
-  }
+    "name": "pjatk-edux-crawler",
+    "version": "1.0.0",
+    "description": "An easy way to see new notifications on the EDUX platform.",
+    "main": "index.js",
+    "scripts": {
+        "config": "cp .env.dist .env",
+        "start": "node index.js",
+        "lint": "tsc --noEmit -p . && tslint \"*.ts\"",
+        "test": "tsc --noEmit -p . && jest --no-cache"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lukaszklis/pjatk-edux-crawler.git"
+    },
+    "author": "Łukasz Kliś <lukasz@klis.pl>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/lukaszklis/pjatk-edux-crawler/issues"
+    },
+    "homepage": "https://github.com/lukaszklis/pjatk-edux-crawler#readme",
+    "dependencies": {
+        "@types/dotenv": "^4.0.2",
+        "@types/jest": "^22.1.2",
+        "chalk": "^2.3.1",
+        "chromeless": "^1.5.0",
+        "dotenv": "^5.0.0",
+        "jest": "^22.3.0",
+        "ts-jest": "^22.0.4",
+        "ts-node": "^4.1.0",
+        "tslint": "^5.9.1",
+        "typescript": "^2.6.2"
+    },
+    "jest": {
+        "transform": {
+            ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+        },
+        "testRegex": "-spec\\.ts$",
+        "moduleFileExtensions": [
+            "ts",
+            "js"
+        ]
+    }
 }
