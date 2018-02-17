@@ -43,7 +43,7 @@ export async function checkCourses(chromeless: Chromeless<any>): Promise<void> {
         });
 
     if (updatedCourses.size === 0) {
-        console.log(chalk.green('\n✅  No new notifications on the EDUX platform.\n'));
+        console.log(chalk.green('\n✅  No new notifications on the EDUX platform.'));
         return;
     }
 
