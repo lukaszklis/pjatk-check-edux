@@ -3,7 +3,7 @@
 After becoming a student at PJATK, I was extremely disappointed with lack of ability to receive notifications whenever
 something is updated in the system (new announcements, forum entries, homework assignments).
 
-EDUX Crawler allows you to run a command to get notifications about updates in the courses you are assigned to.
+EDUX Crawler allows you easily check for new updates in courses and global announcements via running a simple command.
 
 ## Dependencies
 
