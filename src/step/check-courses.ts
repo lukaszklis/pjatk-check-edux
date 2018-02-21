@@ -1,8 +1,8 @@
 import Chromeless from 'chromeless/dist/src/api';
 import chalk from 'chalk';
-import {getCourseLink, getCourseName, getUpdatedSections, hasUpdatedEduxColumns} from '../helper/columns-helper';
-import {Course} from '../model/course';
-import {eduxUrl} from '../config/edux';
+import { getCourseLink, getCourseName, getUpdatedSections, hasUpdatedEduxColumns } from '../helper/columns-helper';
+import { Course } from '../model/course';
+import { eduxUrl } from '../config/edux';
 
 export async function checkCourses(chromeless: Chromeless<any>): Promise<void> {
     const sections = new Map<number, string>();
@@ -17,7 +17,7 @@ export async function checkCourses(chromeless: Chromeless<any>): Promise<void> {
         .evaluate<string[]>(() => {
             return Array
                 .from(document.querySelectorAll('[id^="ctl00_ContentPlaceHolder1_grdNoweElementy_ctl00__"'))
-                .filter((course) => course.textContent.includes('Nowe'))
+                .filter((course) => course.textContent.includes('New'))
                 .map((course) => course.innerHTML.trim());
         });
 

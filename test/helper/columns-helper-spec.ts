@@ -1,4 +1,4 @@
-import {getCourseLink, getCourseName, getUpdatedSections, hasUpdatedEduxColumns} from '../../src/helper/columns-helper';
+import { getCourseLink, getCourseName, getUpdatedSections, hasUpdatedEduxColumns } from '../../src/helper/columns-helper';
 
 describe('hasUpdatedEduxColumns', () => {
     it('returns "true" whenever there are any updates', function() {
@@ -8,7 +8,7 @@ describe('hasUpdatedEduxColumns', () => {
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
-            '<td>Nowe</td>' +
+            '<td>New</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
@@ -60,7 +60,7 @@ describe('getCourseName', () => {
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
-            '<td>Nowe</td>' +
+            '<td>New</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
@@ -87,7 +87,7 @@ describe('getCourseLink', () => {
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
-            '<td>Nowe</td>' +
+            '<td>New</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
@@ -112,23 +112,23 @@ describe('getUpdatedSections', () => {
     beforeEach(() => {
         [
             'Edycja',
-            'Kurs',
-            'Bibliografia',
+            'Course',
+            'Books',
             'FAQ',
-            'Foldery zadań',
+            'Tasks folders',
             'Forum',
-            'Kalendarz',
-            'Lekcje',
-            'Linki',
-            'Materiały',
-            'Obszar roboczy',
-            'Oceny',
-            'Ogłoszenia',
-            'Quizy',
-            'Strony',
-            'Testy',
-            'Wykłady',
-            'Zadania',
+            'Calendar',
+            'Lessons',
+            'WWW',
+            'Materials',
+            'Working folder',
+            'Grades',
+            'Announcements',
+            'Quiz',
+            'Pages',
+            'Tests',
+            'Lectures',
+            'Tasks',
         ].forEach((section, index) => sections.set(index, section));
     });
 
@@ -139,13 +139,13 @@ describe('getUpdatedSections', () => {
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
-            '<td>Nowe</td>' +
+            '<td>New</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
-            '<td>Nowe</td>' +
+            '<td>New</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
             '<td>&nbsp;</td>' +
@@ -156,7 +156,7 @@ describe('getUpdatedSections', () => {
 
         expect(getUpdatedSections(courseElement, sections)).toEqual([
             'Forum',
-            'Oceny',
+            'Grades',
         ]);
     });
 
