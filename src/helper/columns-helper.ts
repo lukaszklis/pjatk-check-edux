@@ -1,5 +1,5 @@
 function isColumnUpdated(column: string): boolean {
-    return column.includes('Nowe');
+    return column.includes('New');
 }
 
 function getEduxColumns(courseElement: string): string[] {
