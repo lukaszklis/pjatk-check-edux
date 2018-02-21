@@ -1,4 +1,4 @@
-import {getCourseLink, getCourseName, getUpdatedSections, hasUpdatedEduxColumns} from '../../src/helper/columns-helper';
+import { getCourseLink, getCourseName, getUpdatedSections, hasUpdatedEduxColumns } from '../../src/helper/columns-helper';
 
 describe('hasUpdatedEduxColumns', () => {
     it('returns "true" whenever there are any updates', function() {

@@ -1,4 +1,4 @@
-import {Course} from '../../src/model/course';
+import { Course } from '../../src/model/course';
 
 describe('Course', () => {
     it('creates a new instance properly', () => {

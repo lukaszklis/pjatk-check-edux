@@ -1,5 +1,5 @@
 import Chromeless from 'chromeless';
-import {eduxUrl} from '../config/edux';
+import { eduxUrl } from '../config/edux';
 
 export async function authenticate(chromeless: Chromeless<any>): Promise<void> {
     await chromeless

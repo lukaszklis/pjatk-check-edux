@@ -1,6 +1,6 @@
 import Chromeless from 'chromeless';
 import chalk from 'chalk';
-import {eduxUrl} from '../config/edux';
+import { eduxUrl } from '../config/edux';
 import * as Configstore from 'configstore';
 
 const announcementsCountKey = 'announcementsCount';

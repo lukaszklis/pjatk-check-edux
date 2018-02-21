@@ -1,8 +1,8 @@
 import Chromeless from 'chromeless';
 import chalk from 'chalk';
-import {authenticate} from './step/authenticate';
-import {checkCourses} from './step/check-courses';
-import {checkAnnouncements} from './step/check-announcements';
+import { authenticate } from './step/authenticate';
+import { checkCourses } from './step/check-courses';
+import { checkAnnouncements } from './step/check-announcements';
 
 export async function getEduxNotifications() {
     const chromeless = new Chromeless();

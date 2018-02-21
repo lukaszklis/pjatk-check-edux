@@ -1,6 +1,6 @@
 import chalk from 'chalk';
-import {config} from 'dotenv';
-import {getEduxNotifications} from './crawler';
+import { config } from 'dotenv';
+import { getEduxNotifications } from './crawler';
 
 config();
 
