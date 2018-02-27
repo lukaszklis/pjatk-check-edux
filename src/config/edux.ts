@@ -1,1 +1,1 @@
-export const eduxUrl = 'https://edux.pjwstk.edu.pl';
+export const eduxUrl = 'https://edux.pjwstk.edu.pl/eng';

@@ -47,10 +47,10 @@ export async function checkCourses(chromeless: Chromeless<any>): Promise<void> {
         return;
     }
 
-    console.log(chalk.yellow('\n⚠️  New notifications for the following courses:\n'));
+    console.log(chalk.yellow('\n⚠️  New notifications for the following courses:'));
 
     Array.from(updatedCourses.values()).forEach((course) => {
-        console.log(`* ${course.name} ` + chalk.cyan(`(${course.updates.join(', ')})`) + ':');
-        console.log('  ' + chalk.blue.underline(`${eduxUrl}/${course.link}\n`));
+        console.log(`\n* ${course.name} ` + chalk.cyan(`(${course.updates.join(', ')})`) + ':');
+        console.log('  ' + chalk.blue.underline(`${eduxUrl}/${course.link}`));
     });
 }
