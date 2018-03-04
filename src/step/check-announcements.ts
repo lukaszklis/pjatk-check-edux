@@ -2,6 +2,7 @@ import Chromeless from 'chromeless';
 import chalk from 'chalk';
 import { eduxUrl } from '../config/edux';
 import * as Configstore from 'configstore';
+import { renderSuccess, renderWarning } from '../helper/messages-helper';
 
 const announcementsCountKey = 'announcementsCount';
 
@@ -19,12 +20,12 @@ export async function checkAnnouncements(chromeless: Chromeless<any>): Promise<v
         });
 
     if (!hasNewAnnouncements(store, announcementRowsCount)) {
-        console.log(chalk.green('\n✅  No new announcements on the EDUX platform.'));
+        renderSuccess('No new announcements on the EDUX platform.');
         return;
     }
 
     store.set(announcementsCountKey, announcementRowsCount);
 
-    console.log(chalk.yellow(`\n⚠️  There are ${chalk.bold(announcementRowsCount.toString())} new announcements.\n`));
+    renderWarning(`There are ${chalk.bold(announcementRowsCount.toString())} new announcements.\n`);
     console.log(`  You can read them under the ”Ogłoszenia” tab: ${chalk.blue(eduxUrl)}`);
 }
