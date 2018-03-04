@@ -3,6 +3,7 @@ import chalk from 'chalk';
 import { getCourseLink, getCourseName, getUpdatedSections, hasUpdatedEduxColumns } from '../helper/columns-helper';
 import { Course } from '../model/course';
 import { eduxUrl } from '../config/edux';
+import { renderSuccess, renderWarning } from '../helper/messages-helper';
 
 export async function checkCourses(chromeless: Chromeless<any>): Promise<void> {
     const sections = new Map<number, string>();
@@ -43,11 +44,11 @@ export async function checkCourses(chromeless: Chromeless<any>): Promise<void> {
         });
 
     if (updatedCourses.size === 0) {
-        console.log(chalk.green('\n✅  No new notifications on the EDUX platform.'));
+        renderSuccess('No new notifications on the EDUX platform.');
         return;
     }
 
-    console.log(chalk.yellow('\n⚠️  New notifications for the following courses:'));
+    renderWarning('New notifications for the following courses:');
 
     Array.from(updatedCourses.values()).forEach((course) => {
         console.log(`\n* ${course.name} ` + chalk.cyan(`(${course.updates.join(', ')})`) + ':');
