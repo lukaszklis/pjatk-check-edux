@@ -1,13 +1,16 @@
 {
-    "name": "pjatk-edux-crawler",
+    "name": "pjatk-edux-checker",
     "version": "1.0.0",
     "description": "An easy way to see new notifications on the EDUX platform.",
-    "main": "index.js",
+    "main": "cli.js",
     "scripts": {
-        "config": "cp .env.dist .env",
-        "start": "node index.js",
+        "config": "./cli.js --init",
+        "start": "./cli.js",
         "lint": "tsc --noEmit -p . && tslint \"*.ts\"",
         "test": "tsc --noEmit -p . && jest --no-cache"
+    },
+    "bin": {
+        "check-edux": "./cli.js"
     },
     "repository": {
         "type": "git",
@@ -21,12 +24,15 @@
     "homepage": "https://github.com/lukaszklis/pjatk-edux-crawler#readme",
     "dependencies": {
         "@types/configstore": "^2.1.1",
-        "@types/dotenv": "^4.0.2",
+        "@types/crypto-js": "^3.1.38",
+        "@types/inquirer": "^0.0.36",
         "@types/jest": "^22.1.2",
         "chalk": "^2.3.1",
         "chromeless": "^1.5.0",
+        "commander": "^2.14.1",
         "configstore": "^3.1.1",
-        "dotenv": "^5.0.0",
+        "crypto-js": "^3.1.9-1",
+        "inquirer": "^5.1.0",
         "jest": "^22.3.0",
         "ts-jest": "^22.0.4",
         "ts-node": "^5.0.1",

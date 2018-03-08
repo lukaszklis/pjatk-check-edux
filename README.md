@@ -1,19 +1,44 @@
-# EDUX Crawler @ [PJATK](http://www.pja.edu.pl) [![Gitmoji](https://img.shields.io/badge/gitmoji-%20📖%20🛠-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me) [![Build Status](https://travis-ci.org/lukaszklis/pjatk-edux-crawler.svg?branch=master)](https://travis-ci.org/lukaszklis/pjatk-edux-crawler)
+# EDUX Checker @ [PJATK](http://www.pja.edu.pl)
+
+[![Build Status](https://travis-ci.org/lukaszklis/pjatk-edux-checker.svg?branch=master)](https://travis-ci.org/lukaszklis/pjatk-edux-checker) [![git3moji](https://img.shields.io/badge/git3moji-%E2%9A%A1%EF%B8%8F%F0%9F%90%9B%F0%9F%93%BA%F0%9F%91%AE%F0%9F%94%A4-fffad8.svg?style=flat-square)](https://robinpokorny.github.io/git3moji/)
 
 After becoming a student at PJATK, I was extremely disappointed with lack of ability to receive notifications whenever
 something is updated in the system (new announcements, forum entries, homework assignments).
 
-EDUX Crawler allows you easily check for new updates in courses and global announcements via running a simple command.
+EDUX Checker allows you easily check for new updates in courses and global announcements via running a simple command
+in your terminal: `check-edux`.
 
-## Dependencies
+## Installation
 
-* Node `8.9.1`+
-* yarn `v1.3.2`+ (suggested, however npm `5.6.0`+ is going to work as well)
+```bash
+npm i -g @lukaszklis/pjatk-edux-checker
+```
 
 ## How to use
 
+Initialize the settings:
+
+```bash
+check-edux --init
+```
+
+From now on you can simply run the following:
+
+```bash
+check-edux
+```
+
+## Development
+
+### Dependencies
+
+* Node `8.9.1`+
+* yarn `v1.5.1`+ (suggested, however npm `5.6.0`+ is going to work as well)
+
+## Development flow
+
 1. Clone this repository.
-1. Install dependencies via: `yarn` (or `npm i`).
-1. Create necessary config files via: `yarn run config` (or `npm run config`).
-1. Crawl the page by running: `yarn start` (or `npm start`).
+1. Install dependencies via: `yarn`.
+1. Create necessary config files via: `yarn run config`.
+1. Crawl the page by running: `yarn start`.
 1. A list of all of the notifications will be shown with links to a specific course.

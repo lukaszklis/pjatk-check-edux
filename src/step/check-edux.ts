@@ -1,13 +1,14 @@
 import Chromeless from 'chromeless';
-import { authenticate } from './step/authenticate';
-import { checkCourses } from './step/check-courses';
-import { checkAnnouncements } from './step/check-announcements';
-import { renderError, renderInfo } from './helper/messages-helper';
+import { authenticate } from './authenticate';
+import { checkCourses } from './check-courses';
+import { checkAnnouncements } from './check-announcements';
+import { renderError, renderInfo } from '../helper/messages-helper';
+import { getLogin } from '../helper/store-helper';
 
 export async function getEduxNotifications() {
     const chromeless = new Chromeless();
 
-    renderInfo(`Logging in as ${process.env.EDUX_USERNAME}…`, '🔑');
+    renderInfo(`Logging in as ${getLogin()}…`, '🔑');
     await authenticate(chromeless).catch(() => renderError('Cannot log in to EDUX!'));
 
     renderInfo('Looking for updated courses…', '👀');
