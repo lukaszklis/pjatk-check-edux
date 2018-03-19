@@ -1,6 +1,6 @@
-# EDUX Checker @ [PJATK](http://www.pja.edu.pl)
+# `check-edux` @ [PJATK](http://www.pja.edu.pl)
 
-[![Build Status](https://travis-ci.org/lukaszklis/pjatk-edux-checker.svg?branch=master)](https://travis-ci.org/lukaszklis/pjatk-edux-checker) [![git3moji](https://img.shields.io/badge/git3moji-%E2%9A%A1%EF%B8%8F%F0%9F%90%9B%F0%9F%93%BA%F0%9F%91%AE%F0%9F%94%A4-fffad8.svg?style=flat-square)](https://robinpokorny.github.io/git3moji/)
+[![Build Status](https://travis-ci.org/lukaszklis/pjatk-check-edux.svg?branch=master)](https://travis-ci.org/lukaszklis/pjatk-check-edux) [![git3moji](https://img.shields.io/badge/git3moji-%E2%9A%A1%EF%B8%8F%F0%9F%90%9B%F0%9F%93%BA%F0%9F%91%AE%F0%9F%94%A4-fffad8.svg?style=flat-square)](https://robinpokorny.github.io/git3moji/)
 
 After becoming a student at PJATK, I was extremely disappointed with lack of ability to receive notifications whenever
 something is updated in the system (new announcements, forum entries, homework assignments).
@@ -11,7 +11,7 @@ in your terminal: `check-edux`.
 ## Installation
 
 ```bash
-npm i -g @lukaszklis/pjatk-edux-checker
+npm i -g @lukaszklis/pjatk-check-edux
 ```
 
 ## How to use

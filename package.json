@@ -1,5 +1,5 @@
 {
-    "name": "@lukaszklis/pjatk-edux-checker",
+    "name": "@lukaszklis/pjatk-check-edux",
     "version": "0.0.0",
     "description": "An easy way to see new notifications on the EDUX platform.",
     "scripts": {
@@ -19,7 +19,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/lukaszklis/pjatk-edux-crawler.git"
+        "url": "git+https://github.com/lukaszklis/pjatk-check-edux.git"
     },
     "author": "Łukasz Kliś <lukasz@klis.pl>",
     "license": "MIT",
