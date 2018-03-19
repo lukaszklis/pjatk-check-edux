@@ -1,12 +1,13 @@
 {
     "name": "@lukaszklis/pjatk-edux-checker",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "description": "An easy way to see new notifications on the EDUX platform.",
     "main": "cli.js",
     "scripts": {
         "config": "./bin/cli.js --init",
-        "start": "./bin/cli.js",
         "lint": "tsc --noEmit -p . && tslint \"*.ts\"",
+        "release": "np",
+        "start": "./bin/cli.js",
         "test": "tsc --noEmit -p . && jest --no-cache"
     },
     "bin": {
@@ -38,6 +39,12 @@
         "ts-node": "^5.0.1",
         "tslint": "^5.9.1",
         "typescript": "^2.6.2"
+    },
+    "devDependencies": {
+        "np": "^2.20.1"
+    },
+    "publishConfig": {
+        "access": "public"
     },
     "jest": {
         "transform": {
