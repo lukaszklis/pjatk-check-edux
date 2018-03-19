@@ -8,6 +8,7 @@
         "clean": "rimraf ./lib",
         "config": "ts-node src/check-edux.ts --init",
         "lint": "npm run-script build && tslint \"*.ts\"",
+        "prepublishOnly": "npm run-script build",
         "release": "np",
         "start": "ts-node src/check-edux.ts",
         "test": "npm run-script build:test && jest --no-cache",
