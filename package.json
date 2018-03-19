@@ -1,5 +1,5 @@
 {
-    "name": "pjatk-edux-checker",
+    "name": "@lukaszklis/pjatk-edux-checker",
     "version": "1.0.0",
     "description": "An easy way to see new notifications on the EDUX platform.",
     "main": "cli.js",
