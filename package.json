@@ -4,13 +4,13 @@
     "description": "An easy way to see new notifications on the EDUX platform.",
     "main": "cli.js",
     "scripts": {
-        "config": "./cli.js --init",
-        "start": "./cli.js",
+        "config": "./bin/cli.js --init",
+        "start": "./bin/cli.js",
         "lint": "tsc --noEmit -p . && tslint \"*.ts\"",
         "test": "tsc --noEmit -p . && jest --no-cache"
     },
     "bin": {
-        "check-edux": "./cli.js"
+        "check-edux": "./bin/cli.js"
     },
     "repository": {
         "type": "git",
