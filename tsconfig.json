@@ -10,7 +10,8 @@
             "es2015"
         ],
         "types": [
-            "dotenv",
+            "crypto-js",
+            "inquirer",
             "jest",
             "node"
         ]

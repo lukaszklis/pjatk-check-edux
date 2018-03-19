@@ -1,10 +1,8 @@
 import chalk from 'chalk';
-import { config } from 'dotenv';
-import { getEduxNotifications } from './crawler';
+import { getEduxNotifications } from './step/check-edux';
+import { hasCredentials } from './helper/store-helper';
 
-config();
-
-if (!process.env.EDUX_USERNAME || !process.env.EDUX_PASSWORD) {
+if (!hasCredentials()) {
     throw new Error(chalk.red('Credentials are not set in the .env file!'));
 }
 
