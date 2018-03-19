@@ -6,7 +6,7 @@ let currentStore: Configstore;
 
 function getStore(): Configstore {
     if (!currentStore) {
-        currentStore = new Configstore('pjatk-edux-checker');
+        currentStore = new Configstore('pjatk-check-edux');
     }
 
     return currentStore;

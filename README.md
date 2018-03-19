@@ -6,7 +6,7 @@
 After becoming a student at PJATK, I was extremely disappointed with lack of ability to receive notifications whenever
 something is updated in the system (new announcements, forum entries, homework assignments).
 
-EDUX Checker allows you easily check for new updates in courses and global announcements via running a simple command
+`check-edux` allows you easily check for new updates in courses and global announcements via running a simple command
 in your terminal: `check-edux`.
 
 ## Installation
