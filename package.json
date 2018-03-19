@@ -9,7 +9,6 @@
         "config": "ts-node src/check-edux.ts --init",
         "lint": "npm run-script build && tslint \"*.ts\"",
         "prepublishOnly": "npm run-script build",
-        "release": "np",
         "start": "ts-node src/check-edux.ts",
         "test": "npm run-script build:test && jest --no-cache",
         "test:ci": "npm run-script build:test && jest --no-cache --runInBand"
@@ -41,7 +40,6 @@
         "@types/inquirer": "^0.0.36",
         "@types/jest": "^22.1.2",
         "jest": "^22.3.0",
-        "np": "^2.20.1",
         "rimraf": "^2.6.2",
         "ts-jest": "^22.0.4",
         "ts-node": "^5.0.1",
