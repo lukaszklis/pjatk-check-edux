@@ -13,7 +13,7 @@ require('ts-node').register({
 });
 
 if (program.init) {
-    require('./src/init.ts');
+    require('../src/init.ts');
 } else {
-    require('./src/run.ts');
+    require('../src/run.ts');
 }
