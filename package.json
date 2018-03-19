@@ -3,8 +3,9 @@
     "version": "0.0.0",
     "description": "An easy way to see new notifications on the EDUX platform.",
     "scripts": {
-        "build": "tsc -p .",
+        "build": "npm run-script clean && tsc -p .",
         "build:test": "tsc --noEmit -p .",
+        "clean": "rimraf ./lib",
         "config": "ts-node src/check-edux.ts --init",
         "lint": "npm run-script build && tslint \"*.ts\"",
         "release": "np",
@@ -40,6 +41,7 @@
         "@types/jest": "^22.1.2",
         "jest": "^22.3.0",
         "np": "^2.20.1",
+        "rimraf": "^2.6.2",
         "ts-jest": "^22.0.4",
         "ts-node": "^5.0.1",
         "tslint": "^5.9.1",
