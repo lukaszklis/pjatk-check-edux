@@ -4,7 +4,7 @@
         "module": "commonjs",
         "moduleResolution": "node",
         "skipDefaultLibCheck": true,
-        "noEmit": true,
+        "outDir": "./lib",
         "lib": [
             "dom",
             "es2015"
@@ -16,6 +16,9 @@
             "node"
         ]
     },
+    "include": [
+        "src/**/*"
+    ],
     "exclude": [
         "node_modules"
     ]
