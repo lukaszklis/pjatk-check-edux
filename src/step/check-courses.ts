@@ -12,14 +12,14 @@ export async function checkCourses(chromeless: Chromeless<any>): Promise<void> {
         .evaluate<string[]>(() => {
             return Array
                 .from(document.querySelectorAll('#ctl00_ContentPlaceHolder1_grdNoweElementy_ctl00 th.rgHeader'))
-                .map((course) => course.textContent);
+                .map((course: HTMLElement) => course.textContent);
         });
     const courseElements = await chromeless
         .evaluate<string[]>(() => {
             return Array
                 .from(document.querySelectorAll('[id^="ctl00_ContentPlaceHolder1_grdNoweElementy_ctl00__"'))
-                .filter((course) => course.textContent.includes('New'))
-                .map((course) => course.innerHTML.trim());
+                .filter((course: HTMLElement) => course.textContent.includes('New'))
+                .map((course: HTMLElement) => course.innerHTML.trim());
         });
 
     courseSections.forEach((courseSection, index) => sections.set(index, courseSection));

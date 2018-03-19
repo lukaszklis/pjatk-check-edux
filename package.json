@@ -1,21 +1,25 @@
 {
-    "name": "@lukaszklis/pjatk-edux-checker",
+    "name": "@lukaszklis/pjatk-check-edux",
     "version": "0.0.0",
     "description": "An easy way to see new notifications on the EDUX platform.",
-    "main": "cli.js",
     "scripts": {
-        "config": "./bin/cli.js --init",
-        "lint": "tsc --noEmit -p . && tslint \"*.ts\"",
+        "build": "npm run-script clean && tsc -p .",
+        "build:test": "tsc --noEmit -p .",
+        "clean": "rimraf ./lib",
+        "config": "ts-node src/check-edux.ts --init",
+        "lint": "npm run-script build && tslint \"*.ts\"",
+        "prepublishOnly": "npm run-script build",
         "release": "np",
-        "start": "./bin/cli.js",
-        "test": "tsc --noEmit -p . && jest --no-cache"
+        "start": "ts-node src/check-edux.ts",
+        "test": "npm run-script build:test && jest --no-cache",
+        "test:ci": "npm run-script build:test && jest --no-cache --runInBand"
     },
     "bin": {
-        "check-edux": "./bin/cli.js"
+        "check-edux": "./bin/check-edux.js"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/lukaszklis/pjatk-edux-crawler.git"
+        "url": "git+https://github.com/lukaszklis/pjatk-check-edux.git"
     },
     "author": "Łukasz Kliś <lukasz@klis.pl>",
     "license": "MIT",
@@ -24,24 +28,25 @@
     },
     "homepage": "https://github.com/lukaszklis/pjatk-edux-crawler#readme",
     "dependencies": {
-        "@types/configstore": "^2.1.1",
-        "@types/crypto-js": "^3.1.38",
-        "@types/inquirer": "^0.0.36",
-        "@types/jest": "^22.1.2",
         "chalk": "^2.3.1",
         "chromeless": "^1.5.0",
         "commander": "^2.14.1",
         "configstore": "^3.1.1",
         "crypto-js": "^3.1.9-1",
-        "inquirer": "^5.1.0",
+        "inquirer": "^5.1.0"
+    },
+    "devDependencies": {
+        "@types/configstore": "^2.1.1",
+        "@types/crypto-js": "^3.1.38",
+        "@types/inquirer": "^0.0.36",
+        "@types/jest": "^22.1.2",
         "jest": "^22.3.0",
+        "np": "^2.20.1",
+        "rimraf": "^2.6.2",
         "ts-jest": "^22.0.4",
         "ts-node": "^5.0.1",
         "tslint": "^5.9.1",
         "typescript": "^2.6.2"
-    },
-    "devDependencies": {
-        "np": "^2.20.1"
     },
     "publishConfig": {
         "access": "public"
