@@ -13,7 +13,8 @@
             "crypto-js",
             "inquirer",
             "jest",
-            "node"
+            "node",
+            "puppeteer"
         ]
     },
     "include": [

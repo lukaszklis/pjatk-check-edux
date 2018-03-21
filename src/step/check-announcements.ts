@@ -1,4 +1,4 @@
-import Chromeless from 'chromeless';
+import * as puppeteer from 'puppeteer';
 import chalk from 'chalk';
 import { eduxUrl } from '../config/edux';
 import { announcementsCountKey } from '../config/store';
@@ -9,13 +9,10 @@ function hasNewAnnouncements(announcementRowsCount: number): boolean {
     return announcementRowsCount > 0 && getStoredValue(announcementsCountKey) !== announcementRowsCount;
 }
 
-export async function checkAnnouncements(chromeless: Chromeless<any>): Promise<void> {
-    const announcementRowsCount = await chromeless
-        .evaluate<number>(() => {
-            return document
-                .querySelectorAll('tr[id^=ctl00_ContentPlaceHolder1_grdOgloszeniaOgolne_ctl00__]')
-                .length;
-        });
+export async function checkAnnouncements(page: puppeteer.Page): Promise<void> {
+    const {announcementRowsCount} = await page.evaluate(() => ({
+        announcementRowsCount: document.querySelectorAll('tr[id^=ctl00_ContentPlaceHolder1_grdOgloszeniaOgolne_ctl00__]').length,
+    }));
 
     if (!hasNewAnnouncements(announcementRowsCount)) {
         renderSuccess('No new announcements on the EDUX platform.');
@@ -24,6 +21,6 @@ export async function checkAnnouncements(chromeless: Chromeless<any>): Promise<v
 
     storeValue<number>(announcementsCountKey, announcementRowsCount);
 
-    renderWarning(`There are ${chalk.bold(announcementRowsCount.toString())} new announcements.\n`);
+    renderWarning(`There are ${chalk.bold(announcementRowsCount.toString())} new announcements.`);
     console.log(`  You can read them under the ”Announcements” tab: ${chalk.blue(eduxUrl)}`);
 }
