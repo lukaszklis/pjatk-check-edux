@@ -5,7 +5,7 @@ import { checkAnnouncements } from './check-announcements';
 import { renderError, renderInfo } from '../helper/messages-helper';
 import { getLogin } from '../helper/store-helper';
 
-export async function getEduxNotifications() {
+export async function crawl() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
