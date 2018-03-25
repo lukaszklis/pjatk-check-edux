@@ -9,7 +9,7 @@ something is updated in the system (new announcements, forum entries, homework a
 `check-edux` allows you easily check for new updates in courses and global announcements via running a simple command
 in your terminal: `check-edux`.
 
-![`check-edux`'s preview](https://user-images.githubusercontent.com/11782/37620076-88c701d8-2bbb-11e8-9034-a66a024da0a8.png)
+![`check-edux`'s preview](https://user-images.githubusercontent.com/11782/37875725-88e9cf42-3043-11e8-8c50-b2b774d9b5db.png)
 
 ## Installation
 
@@ -18,14 +18,6 @@ npm i -g @lukaszklis/pjatk-check-edux
 ```
 
 ## How to use
-
-Initialize the settings:
-
-```bash
-check-edux --init
-```
-
-From now on you can simply run the following:
 
 ```bash
 check-edux
@@ -42,6 +34,5 @@ check-edux
 
 1. Clone this repository.
 1. Install dependencies via: `yarn`.
-1. Create necessary config files via: `yarn run config`.
 1. Crawl the page by running: `yarn start`.
 1. A list of all of the notifications will be shown with links to a specific course.

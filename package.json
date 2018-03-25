@@ -6,7 +6,6 @@
         "build": "npm run-script clean && tsc -p .",
         "build:test": "tsc --noEmit -p .",
         "clean": "rimraf ./lib",
-        "config": "ts-node src/check-edux.ts --init",
         "lint": "npm run-script build && tslint \"*.ts\"",
         "prepublishOnly": "npm run-script build",
         "start": "ts-node src/check-edux.ts",
