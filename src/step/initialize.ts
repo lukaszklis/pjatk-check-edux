@@ -25,6 +25,6 @@ function askForCredentials(): void {
 
 export function initialize(): void {
     storeValue<number>(announcementsCountKey, 0);
-    renderInfo('Enter your EDUX credentials…\n', '🔑');
+    renderInfo('Enter your EDUX credentials…\n');
     askForCredentials();
 }

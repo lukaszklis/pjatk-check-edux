@@ -49,10 +49,10 @@ export async function checkCourses(page: puppeteer.Page): Promise<void> {
         return;
     }
 
-    renderWarning('New notifications for the following courses:');
+    renderWarning('  New notifications for the following courses:');
 
     Array.from(updatedCourses.values()).forEach((course) => {
-        console.log(`\n* ${course.name} ` + chalk.cyan(`(${course.updates.join(', ')})`) + ':');
+        console.log(`\n  ${course.name} ` + chalk.cyan(`(${course.updates.join(', ')})`) + ':');
         console.log('  ' + chalk.blue.underline(`${eduxUrl}/${course.link}`));
     });
 }

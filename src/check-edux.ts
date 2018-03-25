@@ -10,7 +10,7 @@ program
     .parse(process.argv);
 
 if (program.init) {
-    renderInfo('Configuring edux-check…', '🔧');
+    renderInfo('Configuring edux-check…');
     initialize();
 } else {
     if (!hasCredentials()) {
