@@ -45,3 +45,9 @@ export function getLogin(): string {
 export function getPassword(): string {
     return getEncryptedValue(storePasswordKey);
 }
+
+export function clearStore(): void {
+    const store = getStore();
+
+    store.clear();
+}
