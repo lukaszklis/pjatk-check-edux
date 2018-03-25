@@ -1,6 +1,6 @@
 {
     "name": "@lukaszklis/pjatk-check-edux",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "An easy way to see new notifications on the EDUX platform.",
     "scripts": {
         "build": "npm run-script clean && tsc -p .",
