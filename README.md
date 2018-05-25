@@ -34,5 +34,5 @@ check-edux
 
 1. Clone this repository.
 1. Install dependencies via: `yarn`.
-1. Crawl the page by running: `yarn start`.
+1. Run the development environment via: `yarn watch`.
 1. A list of all of the notifications will be shown with links to a specific course.
