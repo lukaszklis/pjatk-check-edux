@@ -35,13 +35,15 @@ module.exports = {
         {
             apply: (compiler) => {
                 compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
-                    exec(
-                        './bin/check-edux.js',
-                        (err, stdout, stderr) => {
-                            if (stdout) process.stdout.write(stdout);
-                            if (stderr) process.stderr.write(stderr);
-                        }
-                    );
+                    if (compilation.errors.length === 0) {
+                        exec(
+                            './bin/check-edux.js',
+                            (err, stdout, stderr) => {
+                                if (stdout) process.stdout.write(stdout);
+                                if (stderr) process.stderr.write(stderr);
+                            }
+                        );
+                    }
                 });
             }
         }

@@ -10,6 +10,8 @@ export async function crawl() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
+    console.log('');
+
     renderInfo(`Logging in as ${getLogin()}…`);
     await login(page).catch(() => renderError('Cannot log in to EDUX!'));
 
