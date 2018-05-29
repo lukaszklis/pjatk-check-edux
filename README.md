@@ -9,7 +9,7 @@ something is updated in the system (new announcements, forum entries, homework a
 `check-edux` allows you easily check for new updates in courses and global announcements via running a simple command
 in your terminal: `check-edux`.
 
-![`check-edux`'s preview](https://user-images.githubusercontent.com/11782/37875725-88e9cf42-3043-11e8-8c50-b2b774d9b5db.png)
+![`check-edux`'s preview](https://user-images.githubusercontent.com/11782/40647523-5956f068-632c-11e8-8f25-565bd88c2cb8.png)
 
 ## Installation
 
