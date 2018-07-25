@@ -22,5 +22,5 @@ export async function checkAnnouncements(page: puppeteer.Page): Promise<void> {
     storeValue<number>(announcementsCountKey, announcementRowsCount);
 
     renderWarning(`There are ${chalk.bold(announcementRowsCount.toString())} new announcements.`);
-    console.log(`  You can read them under the ”Announcements” tab: ${chalk.blue(eduxUrl)}\n`);
+    console.log(`  You can read them under the "Announcements" tab: ${chalk.blue.underline(eduxUrl)}\n`);
 }
