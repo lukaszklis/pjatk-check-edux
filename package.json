@@ -23,9 +23,9 @@
     "author": "Łukasz Kliś <lukasz@klis.pl>",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/lukaszklis/pjatk-edux-crawler/issues"
+        "url": "https://github.com/lukaszklis/pjatk-check-edux/issues"
     },
-    "homepage": "https://github.com/lukaszklis/pjatk-edux-crawler#readme",
+    "homepage": "https://github.com/lukaszklis/pjatk-check-edux#readme",
     "dependencies": {
         "chalk": "^2.3.1",
         "commander": "^2.14.1",
