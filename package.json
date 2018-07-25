@@ -2,6 +2,11 @@
     "name": "@lukaszklis/pjatk-check-edux",
     "version": "2.1.0",
     "description": "An easy way to see new notifications on the EDUX platform.",
+    "keywords": [
+        "pjatk",
+        "pjait",
+        "edux"
+    ],
     "scripts": {
         "build": "npm run-script clean && webpack --config webpack.prod.config.js",
         "build:test": "tsc --noEmit -p .",
@@ -23,9 +28,9 @@
     "author": "Łukasz Kliś <lukasz@klis.pl>",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/lukaszklis/pjatk-edux-crawler/issues"
+        "url": "https://github.com/lukaszklis/pjatk-check-edux/issues"
     },
-    "homepage": "https://github.com/lukaszklis/pjatk-edux-crawler#readme",
+    "homepage": "https://github.com/lukaszklis/pjatk-check-edux#readme",
     "dependencies": {
         "chalk": "^2.3.1",
         "commander": "^2.14.1",
