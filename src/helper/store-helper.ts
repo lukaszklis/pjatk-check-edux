@@ -1,12 +1,12 @@
-import * as Configstore from 'configstore';
-import { storeLoginKey, storePasswordKey } from '../config/store';
-import { decrypt, encrypt } from './crypto-helper';
+import * as Configstore from "configstore";
+import { storeLoginKey, storePasswordKey } from "../config/store";
+import { decrypt, encrypt } from "./crypto-helper";
 
 let currentStore: Configstore;
 
 function getStore(): Configstore {
     if (!currentStore) {
-        currentStore = new Configstore('pjatk-check-edux');
+        currentStore = new Configstore("pjatk-check-edux");
     }
 
     return currentStore;

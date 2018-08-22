@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require('../lib/check-edux');
+require("../lib/check-edux");

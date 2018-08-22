@@ -1,7 +1,7 @@
-import chalk from 'chalk';
+import chalk from "chalk";
 
 function prefixy(message: string, prefix?: string): string {
-    let tmp = '  ';
+    let tmp = "  ";
 
     if (prefix) {
         tmp = prefix + tmp.slice(-1);
@@ -15,7 +15,7 @@ export function renderError(message: string): void {
 }
 
 export function renderInfo(message: string): void {
-    console.log(chalk.gray(prefixy(message, '>')));
+    console.log(chalk.gray(prefixy(message, ">")));
 }
 
 export function renderSuccess(message: string): void {
