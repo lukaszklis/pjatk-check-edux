@@ -1,5 +1,5 @@
-import * as CryptoJS from 'crypto-js';
-import { storeHash } from '../config/store';
+import * as CryptoJS from "crypto-js";
+import { storeHash } from "../config/store";
 
 const { AES, enc } = CryptoJS;
 
